@@ -1,0 +1,8 @@
+function add_to_list(){
+  document.getElementById("listing").insertAdjacentHTML("afterbegin", "<%= j render 'email_new', email: @email %>")
+  
+  document.getElementById('inbox-msgs').innerHTML = "<%= @emails.count %>"
+  document.getElementById('inbox-unread').innerHTML = "<%= @readed %>"
+  console.log("<%= @readed %>")
+}
+add_to_list()
